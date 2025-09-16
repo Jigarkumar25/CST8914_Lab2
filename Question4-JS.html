@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Question 4 - JavaScript</title>
+  <style>
+    button {
+      background-color: #0B3550;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:focus {
+      outline: 3px solid #FFD54F;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML DOM Events</h1>
+  <p>Trigger a function on hover, focus, or keyboard activation that will output "Hello World":</p>
+
+  
+  <button id="actionBtn" type="button">Action!</button>
+
+  <p id="demo" aria-live="polite"></p>
+
+  <script>
+    const btn = document.getElementById("actionBtn");
+    const output = document.getElementById("demo");
+
+    function showMessage() {
+      output.textContent = "Hello World";
+    }
+
+    
+    btn.addEventListener("mouseover", showMessage);
+
+    
+    btn.addEventListener("focus", showMessage);
+
+    
+    btn.addEventListener("click", showMessage);
+  </script>
+</body>
+</html>
